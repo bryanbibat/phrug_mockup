@@ -4,6 +4,11 @@ module ApplicationHelper
   end
 
   def connect_list_class
-    "dropdown " + (controller.controller_name.include?("connect") ? "active" : "")
+    "dropdown " + 
+      (["rubyists"].include?(controller.controller_name) ? "active" : "")
+  end
+
+  def build_list_class
+    "dropdown " + (controller.controller_name.include?("build") ? "active" : "")
   end
 end
